@@ -1,6 +1,17 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "Pages": {
+    "Home": {
+      "meta": {
+        "title": "Inicio",
+        "description": "Página de inicio"
+      },
+      "hero": {
+        "topHeader": "Impulsa tu carrera y tu empresa",
+        "title": "Capacitación profesional en tecnología y automatización",
+        "description": "Domina herramientas clave como Power BI, Excel y Power Automate con cursos diseñados para profesionales y empresas. Aprende a tu ritmo con contenido actualizado y expertos en la industria.",
+        "cta": "Explora los cursos",
+        "cta2": "Capacitación para empresas"
+      }
+    }
   }
 }
