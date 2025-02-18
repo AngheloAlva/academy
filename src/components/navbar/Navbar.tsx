@@ -1,14 +1,14 @@
 import { Link } from "@/i18n/routing"
 
 import ThemeButton from "./ThemeButton"
-import Logo from "./Logo"
+import Logo from "../icons/Logo"
 
 export default function Navbar(): React.ReactElement {
 	return (
-		<header className="py2 fixed left-4 right-4 top-2 flex items-center justify-between gap-4 rounded-full px-4 backdrop-blur-xl dark:text-white">
-			<Logo />
+		<header className="fixed left-4 right-4 top-2 z-[100] flex items-center justify-between gap-4 rounded-full px-4 py-2 shadow backdrop-blur-2xl dark:text-white">
+			<Logo className="h-11 w-fit text-black dark:text-white" />
 
-			<nav>
+			<nav className="hidden md:flex">
 				<ul className="flex items-center gap-4 font-medium">
 					<li>
 						<Link href="/">Home</Link>

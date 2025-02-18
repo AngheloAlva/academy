@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss"
 
+import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette"
+
 export default {
 	darkMode: ["class"],
 	content: [
@@ -63,8 +65,33 @@ export default {
 			fontFamily: {
 				general: ["Recursive Variable", "sans-serif"],
 			},
+			animation: {
+				aurora: "aurora 60s linear infinite",
+			},
+			keyframes: {
+				aurora: {
+					from: {
+						backgroundPosition: "50% 50%, 50% 50%",
+					},
+					to: {
+						backgroundPosition: "350% 50%, 350% 50%",
+					},
+				},
+			},
 		},
 	},
 	// eslint-disable-next-line @typescript-eslint/no-require-imports
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate"), addVariablesForColors],
 } satisfies Config
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function addVariablesForColors({ addBase, theme }: any) {
+	const allColors = flattenColorPalette(theme("colors"))
+	const newVars = Object.fromEntries(
+		Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+	)
+
+	addBase({
+		":root": newVars,
+	})
+}
