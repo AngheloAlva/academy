@@ -1,4 +1,22 @@
 {
+  "Navbar": {
+    "home": "Inicio",
+    "courses": "Cursos",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "account": {
+      "label": "Mi Cuenta",
+      "login": "Iniciar sesión",
+      "register": "Registrarse",
+      "logout": "Cerrar sesión",
+      "profile": "Perfil"
+    },
+    "language": {
+      "label": "Idioma",
+      "spanish": "Español",
+      "english": "Inglés"
+    }
+  },
   "Pages": {
     "Home": {
       "meta": {
@@ -7,7 +25,7 @@
       },
       "hero": {
         "topHeader": "Impulsa tu carrera y tu empresa",
-        "title": "Capacitación profesional en tecnología y automatización",
+        "title": "Capacitación <feature>profesional</feature> en tecnología y automatización",
         "description": "Domina herramientas clave como Power BI, Excel y Power Automate con cursos diseñados para profesionales y empresas. Aprende a tu ritmo con contenido actualizado y expertos en la industria.",
         "cta": "Explora los cursos",
         "cta2": "Capacitación para empresas"

@@ -1,31 +1,40 @@
 import { Link } from "@/i18n/routing"
 
+import LanguageButton from "./LanguageButton"
+import AccountButton from "./AccountButton"
 import ThemeButton from "./ThemeButton"
 import Logo from "../icons/Logo"
+import { useTranslations } from "next-intl"
 
 export default function Navbar(): React.ReactElement {
-	return (
-		<header className="fixed left-4 right-4 top-2 z-[100] flex items-center justify-between gap-4 rounded-full px-4 py-2 shadow backdrop-blur-2xl dark:text-white">
-			<Logo className="h-11 w-fit text-black dark:text-white" />
+	const t = useTranslations("Navbar")
 
-			<nav className="hidden md:flex">
-				<ul className="flex items-center gap-4 font-medium">
+	return (
+		<header className="fixed left-0 right-0 top-0 z-50 mx-auto inline-flex max-w-screen-xl items-center justify-between gap-4 overflow-hidden border-b border-neutral-800 bg-transparent p-2 px-4 py-2 font-medium text-black shadow backdrop-blur-3xl transition-all duration-100 [box-shadow:5px_3px_rgb(82_82_82)] dark:border-neutral-200 dark:text-white dark:[box-shadow:5px_3px_#afafaf] md:left-4 md:right-4 md:top-2 md:rounded-md md:border">
+			<div className="flex flex-1">
+				<Logo className="h-11 w-fit justify-start text-black dark:text-white" />
+			</div>
+
+			<nav className="hidden justify-center md:flex">
+				<ul className="flex items-center gap-4 font-medium lg:gap-8">
 					<li>
-						<Link href="/">Home</Link>
+						<Link href="/">{t("home")}</Link>
 					</li>
 					<li>
-						<Link href="/">About</Link>
+						<Link href="/">{t("courses")}</Link>
 					</li>
 					<li>
-						<Link href="/">Services</Link>
+						<Link href="/">{t("about")}</Link>
 					</li>
 					<li>
-						<Link href="/">Contact</Link>
+						<Link href="/">{t("contact")}</Link>
 					</li>
 				</ul>
 			</nav>
 
-			<div>
+			<div className="flex flex-1 items-center justify-end gap-2">
+				<LanguageButton />
+				<AccountButton />
 				<ThemeButton />
 			</div>
 		</header>

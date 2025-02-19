@@ -63,7 +63,8 @@ export default {
 				sm: "calc(var(--radius) - 4px)",
 			},
 			fontFamily: {
-				general: ["Recursive Variable", "sans-serif"],
+				general: ["Work Sans Variable", "sans-serif"],
+				feature: ["Cormorant Garamond", "serif"],
 			},
 			animation: {
 				aurora: "aurora 60s linear infinite",
