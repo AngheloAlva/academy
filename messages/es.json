@@ -29,6 +29,11 @@
         "description": "Domina herramientas clave como Power BI, Excel y Power Automate con cursos diseñados para profesionales y empresas. Aprende a tu ritmo con contenido actualizado y expertos en la industria.",
         "cta": "Explora los cursos",
         "cta2": "Capacitación para empresas"
+      },
+      "featureCourses": {
+        "title": "Cursos destacados",
+        "description": "Aprende a tu ritmo con contenido actualizado y expertos en la industria.",
+        "cta": "Ver todos los cursos"
       }
     }
   }

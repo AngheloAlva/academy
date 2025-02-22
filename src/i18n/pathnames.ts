@@ -15,6 +15,10 @@ export const pathnames = {
 		en: "/contact",
 		es: "/contacto",
 	},
+	"/courses": {
+		en: "/courses",
+		es: "/cursos",
+	},
 
 	// Auth
 	"/auth/login": {
