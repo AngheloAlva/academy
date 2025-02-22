@@ -3,57 +3,72 @@
 import { useTranslations } from "next-intl"
 import { motion } from "motion/react"
 
-import { AuroraBackground } from "@/components/ui/aurora-background"
+import ZigzagLines from "@/components/icons/ZigzagLines"
 import { Button } from "@/components/ui/button"
 
 export default function HomeHero(): React.ReactElement {
 	const t = useTranslations("Pages.Home")
 
 	return (
-		<AuroraBackground className="h-[95dvh]">
-			<motion.div
-				initial={{ opacity: 0.0, y: 40 }}
-				whileInView={{ opacity: 1, y: 0 }}
-				transition={{
-					delay: 0.3,
-					duration: 0.8,
-					ease: "easeInOut",
-				}}
-				className="relative flex flex-col items-center justify-center gap-4 px-4"
-			>
-				<section className="mx-auto flex h-full w-full max-w-screen-lg flex-col items-center justify-center text-center dark:text-white">
-					<span className="text-xs dark:text-white/70 md:text-sm">{t("hero.topHeader")}</span>
+		<div className="grid h-[85dvh] w-screen grid-cols-12 grid-rows-8 gap-0">
+			<div className="col-span-1 row-span-7 min-h-full border-b border-neutral-800 dark:border-neutral-200" />
 
-					<h1 className="mt-1 text-balance text-4xl font-bold md:text-5xl lg:text-6xl">
+			<section className="col-span-10 row-span-7 mx-auto min-h-full w-full border border-t-0 border-neutral-800 p-2 dark:border-neutral-200 sm:p-8 md:col-span-6">
+				<motion.div
+					initial={{ opacity: 0.0, y: 40 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{
+						delay: 0.3,
+						duration: 0.8,
+						ease: "easeInOut",
+					}}
+					className="flex h-full w-full flex-col items-center justify-center text-center text-neutral-800 dark:text-neutral-200 sm:items-start sm:text-left md:justify-end"
+				>
+					<h1 className="mt-1 text-balance font-feature text-4xl font-bold sm:text-5xl lg:text-7xl xl:text-8xl">
 						{t.rich("hero.title", {
 							feature: (children) => (
-								<span className="bg-gradient-to-r from-a-secondary to-a-feature bg-clip-text text-transparent">
+								<div className="relative inline-block">
+									<div
+										aria-hidden={true}
+										className="absolute -left-3 -right-3 h-12 rounded-[50%] border-2 border-neutral-800 opacity-70 dark:border-neutral-200 sm:h-14 lg:-left-5 lg:-right-5 lg:h-20 xl:h-28"
+									></div>
 									{children}
-								</span>
+								</div>
 							),
 						})}
 					</h1>
+
 					<p className="mt-4 max-w-prose text-pretty text-sm font-light dark:text-white/70 md:mt-6 lg:text-base">
 						{t("hero.description")}
 					</p>
 
-					<div className="mt-6 flex flex-wrap items-center justify-center gap-4 md:mt-10">
+					<div className="mt-6 flex flex-wrap items-center gap-4 sm:justify-start md:mt-10">
 						<Button
 							size="lg"
-							className="group relative inline-flex h-fit items-center justify-center overflow-hidden rounded-md border border-neutral-800 bg-a-secondary p-2 font-medium tracking-wide transition-all duration-100 [box-shadow:3px_3px_#004237] hover:bg-a-secondary hover:brightness-90 active:translate-x-[1px] active:translate-y-[1px] active:[box-shadow:0px_0px_#004237] dark:text-white dark:hover:bg-a-secondary dark:hover:brightness-90 lg:px-4 lg:py-2.5 lg:text-base"
+							className="text-neutal-800 rounded-none border border-neutral-800 bg-transparent px-4 hover:bg-neutral-800 hover:text-white dark:border-neutral-200 dark:hover:bg-neutral-200 dark:hover:text-neutral-800 lg:text-base xl:px-6"
 						>
 							{t("hero.cta")}
 						</Button>
 
 						<Button
 							size="lg"
-							className="group relative inline-flex h-fit items-center justify-center overflow-hidden rounded-md border border-neutral-800 p-2 font-medium tracking-wide transition-all duration-100 [box-shadow:3px_3px_rgb(82_82_82)] active:translate-x-[1px] active:translate-y-[1px] active:[box-shadow:0px_0px_rgb(82_82_82)] dark:[box-shadow:3px_3px_#afafaf] dark:active:[box-shadow:0px_0px_#afafaf] lg:px-4 lg:py-2.5 lg:text-base"
+							className="text-neutal-800 rounded-none border border-neutral-800 bg-transparent px-4 hover:bg-neutral-800 hover:text-white dark:border-neutral-200 dark:hover:bg-neutral-200 dark:hover:text-neutral-800 lg:text-base xl:px-6"
 						>
 							{t("hero.cta2")}
 						</Button>
 					</div>
-				</section>
-			</motion.div>
-		</AuroraBackground>
+				</motion.div>
+			</section>
+
+			<div className="row-span-7 hidden min-h-full border-b border-r border-neutral-800 dark:border-neutral-200 md:col-span-4 md:block" />
+			<div className="col-span-1 row-span-7 min-h-full border-b border-neutral-800 dark:border-neutral-200" />
+
+			<div className="relative col-span-1 row-span-1 h-16 overflow-hidden border-b border-neutral-800 dark:border-neutral-200">
+				<ZigzagLines className="absolute -top-10 left-0 right-2 h-56 w-56 text-neutral-800 dark:text-neutral-200" />
+			</div>
+			<div className="col-span-10 row-span-1 h-16 border-x border-b border-neutral-800 dark:border-neutral-200 md:col-span-6" />
+			<div className="row-span-1 hidden h-16 border-b border-r border-neutral-800 dark:border-neutral-200 md:col-span-4 md:block" />
+			<div className="col-span-1 row-span-1 h-16 border-b border-neutral-800 dark:border-neutral-200" />
+		</div>
 	)
 }

@@ -35,10 +35,18 @@ export default async function RootLayout({
 
 	return (
 		<html lang={locale} suppressHydrationWarning>
-			<body className="relative overflow-x-hidden font-general antialiased selection:bg-a-secondary selection:text-white">
+			<body className="overflow-x-hidden font-general antialiased selection:bg-a-secondary selection:text-white">
 				<ThemeProvider attribute={"class"} defaultTheme="system" enableSystem>
 					<NextIntlClientProvider messages={messages}>
-						<Navbar />
+						<div className="grid w-screen grid-cols-12 grid-rows-2">
+							<div className="col-span-1 row-span-1 h-16 border-t border-neutral-800 dark:border-neutral-200" />
+							<div className="col-span-10 row-span-1 h-16 border-x border-t border-neutral-800 dark:border-neutral-200 md:col-span-6" />
+							<div className="row-span-1 hidden h-16 border-r border-t border-neutral-800 dark:border-neutral-200 md:col-span-4 md:block" />
+							<div className="col-span-1 row-span-1 h-16 border-t border-neutral-800 dark:border-neutral-200" />
+
+							<Navbar />
+						</div>
+
 						{children}
 					</NextIntlClientProvider>
 				</ThemeProvider>

@@ -24,7 +24,7 @@ export default function AccountButton(): React.ReactElement {
 
 	return (
 		<DropdownMenu>
-			<DropdownMenuTrigger className="group relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-md border border-neutral-800 bg-transparent p-2 font-medium text-black transition-all duration-100 [box-shadow:2px_2px_rgb(82_82_82)] hover:bg-white active:translate-x-[1px] active:translate-y-[1px] active:ring-0 active:[box-shadow:0px_0px_rgb(82_82_82)] dark:border-neutral-200 dark:text-white dark:[box-shadow:2px_2px_#afafaf] dark:hover:bg-black dark:active:[box-shadow:0px_0px_#afafaf]">
+			<DropdownMenuTrigger className="transtion-colors flex h-9 w-9 items-center justify-center rounded-none border border-neutral-800 p-2 shadow hover:bg-neutral-800 hover:text-white dark:border-neutral-200 dark:text-neutral-200 dark:hover:bg-neutral-200 dark:hover:text-neutral-800">
 				<User />
 			</DropdownMenuTrigger>
 			<DropdownMenuContent className="relative overflow-hidden rounded-md border border-neutral-800 [box-shadow:2px_2px_rgb(82_82_82)] hover:bg-white dark:border-neutral-200 dark:text-white dark:[box-shadow:2px_2px_#afafaf] dark:hover:bg-black">
