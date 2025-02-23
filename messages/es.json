@@ -34,6 +34,10 @@
         "title": "Cursos destacados",
         "description": "Aprende a tu ritmo con contenido actualizado y expertos en la industria.",
         "cta": "Ver todos los cursos"
+      },
+      "aboutUs": {
+        "title": "Sobre nosotros",
+        "description": "<p>En <feature>RA Capacitaciones</feature>, nos especializamos en la formación profesional y el desarrollo de habilidades clave para el entorno laboral moderno. Nuestro enfoque está en capacitar a individuos y empresas en herramientas tecnológicas como Power BI, Excel, Power Automate, SQL y más, impulsando su productividad y toma de decisiones basadas en datos.</p><p>La tecnología avanza rápidamente, y creemos que el conocimiento es la clave para mantenerse competitivo en un mundo en constante cambio. A través de cursos prácticos, actualizados y orientados a resultados, ayudamos a nuestros alumnos a aplicar de inmediato lo aprendido, optimizando procesos y mejorando la eficiencia en sus organizaciones.</p><p>Nuestro compromiso es ofrecer una experiencia de aprendizaje clara, efectiva e innovadora, preparando a profesionales y empresas para enfrentar los desafíos del futuro con confianza y capacidad.</p>"
       }
     }
   }
